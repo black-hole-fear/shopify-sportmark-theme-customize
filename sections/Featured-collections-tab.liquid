@@ -26,14 +26,15 @@
 
       {% style %}
         @media (min-width: 1536px) {
-          .feature-product-section {
-            display: flex;
-            justify-content: center;
-            transform: scale(1.05);
+          .feature-products-section {
+            margin: auto;
+            display: flex !important;
+            justify-content: center !important;
+            transform: scale(1.05) !important;
           }
           .feature-product-slide {
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 0;
+            margin-right: 0;
           }
         }
       {% endstyle %}
@@ -116,7 +117,7 @@
                     >
 
                       <div class="collection-product__inner">
-                      {% render 'product-card-2',
+                      {% render 'product-card', 
                         product_card_product: product,
                         media_size: section.settings.image_ratio,
                         media_fit: section.settings.image_fit,
