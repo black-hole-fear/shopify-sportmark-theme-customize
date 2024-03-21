@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="theme-color" content="">
+		{{- 'bootstrap.min.css' | asset_url | stylesheet_tag: preload: true -}}
 		<link rel="canonical" href="{{ canonical_url }}">
 		<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
@@ -230,7 +231,7 @@
 			overflow-x: hidden;
 			}
 		{% endstyle %}
-		{{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+		
 		{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 		{{ 'base.css' | asset_url | stylesheet_tag }}
 		{{ 'custom.css' | asset_url | stylesheet_tag }}

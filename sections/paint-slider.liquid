@@ -1,5 +1,6 @@
 {{ 'section-paint-slider.css' | asset_url | stylesheet_tag: preload: true }}
 
+
 {% assign sectId = section.id | prepend: 'shopify-section-' %}
 {% assign code = sectId | slice: -8, 8 | replace: '-', '' %}
 
