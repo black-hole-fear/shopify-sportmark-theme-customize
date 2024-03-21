@@ -33,6 +33,7 @@
             margin-bottom: {{ section.settings.margin_bottom }}px;
         }
     }
+
 {% endstyle %}
 
 <div class="browsecategory browsecategory-{{ section.id }} section-{{ section.id }}-padding">
@@ -67,6 +68,11 @@
                     btn_label: block.settings.btn_label,
                     btn_link: block.settings.btn_link,
                     show_icon: section.settings.show_icon,
+                    remove_btn: section.settings.remove_button,
+                    box_radius: section.settings.box_radius,
+                    button_radius: section.settings.button_radius,
+                    ht_btn_padding: section.settings.btn_horizontal_padding,
+                    vt_btn_padding: section.settings.btn_vertical_padding,
                     flex: 'align-items-center'
                 %}
             </li>
@@ -159,6 +165,42 @@
             "id": "show_icon",
             "label": "Show icon with button",
             "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "remove_button",
+            "label": "Remove button",
+            "default": false
+        },
+        {
+            "type": "range",
+            "id": "box_radius",
+            "label": "Change box roundness",
+            "default": 30,
+            "min": 0,
+            "max": 300,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "button_radius",
+            "label": "Change button roundness",
+            "min": 0,
+            "max": 100,
+            "unit": "px",
+            "default": 30
+        },
+        {
+            "type": "text",
+            "id": "btn_horizontal_padding",
+            "label": "Horizontal padding of button",
+            "default": 0
+        },
+        {
+            "type": "text",
+            "id": "btn_vertical_padding",
+            "label": "Vertical padding of button",
+            "default": 24
         },
         {
             "type": "header",
