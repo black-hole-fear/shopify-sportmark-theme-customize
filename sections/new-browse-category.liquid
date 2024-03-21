@@ -41,7 +41,7 @@
         <div class="container">
             <div class="section-header text-center no-margin">
                 {% if section.settings.heading != blank %}
-                    <h2 class="section-heading text-white">{{ section.settings.heading | newline_to_br }}</h2>
+                    <h2 class="section-heading">{{ section.settings.heading | newline_to_br }}</h2>
                 {% endif %}
 
                 {% if section.settings.text != blank %}
@@ -177,8 +177,9 @@
             "id": "box_radius",
             "label": "Change box roundness",
             "default": 30,
+            "step": 2,
             "min": 0,
-            "max": 300,
+            "max": 200,
             "unit": "px"
         },
         {
@@ -191,13 +192,13 @@
             "default": 30
         },
         {
-            "type": "text",
+            "type": "number",
             "id": "btn_horizontal_padding",
             "label": "Horizontal padding of button",
             "default": 0
         },
         {
-            "type": "text",
+            "type": "number",
             "id": "btn_vertical_padding",
             "label": "Vertical padding of button",
             "default": 24
